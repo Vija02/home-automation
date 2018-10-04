@@ -6,10 +6,12 @@ const motor = new Gpio(pin, { mode: Gpio.OUTPUT })
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
+const cors = require('cors')
 
 // Start on Off by default
 motor.servoWrite(500)
 
+app.use(cors())
 app.get('/', (req, res) => res.send('Hello World!'))
 
 app.get('/status', (req, res) => {
