@@ -12,7 +12,7 @@ COPY . .
 RUN yarn build
 RUN yarn gzip
 
-FROM nginx:alpine
+FROM drakerin/rpi-alpine-nginx
 
 COPY nginx.config /etc/nginx/conf.d/default.conf
 COPY --from=build /temp-build/build /usr/share/nginx/html
