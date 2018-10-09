@@ -50,7 +50,7 @@ class App extends Component {
 						format={val => Math.floor(((val - 500) / 2000) * 100) + '%'}
 						onChange={value => {
 							this.setState({ value })
-							fetch(`${base_url}/${value}`)
+							axios.get(`${base_url}/${value}`)
 						}}
 						className="container-height"
 					/>
