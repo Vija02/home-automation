@@ -1,3 +1,11 @@
+# Heater Frontend
+
+1. `docker build -t heater-frontend .`
+2. ```bash
+docker save heater-frontend | bzip2 | pv | \
+     ssh pi 'bunzip2 | docker load'
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
