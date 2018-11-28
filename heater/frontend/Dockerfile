@@ -1,4 +1,4 @@
-FROM node:alpine as build
+FROM node:lts-alpine as build
 
 RUN apk add --update gzip
 
