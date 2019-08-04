@@ -1,0 +1,11 @@
+[Unit]
+Description=Heater_server
+
+
+[Service]
+Type=forking    
+ExecStart=/usr/local/bin/node /home/pi/home-automation/heater/web-server/index.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
