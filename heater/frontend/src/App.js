@@ -7,7 +7,7 @@ import thermometer from './thermometer.svg'
 
 import './App.css'
 
-const base_url = process.env.REACT_BACKEND_URL
+const base_url = process.env.REACT_APP_BACKEND_URL
 
 class App extends Component {
 	constructor(props) {
